@@ -1,0 +1,296 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/bootstrap.min.css">
+
+<div>
+    <div class="header-dark">
+     <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+       <div class="container">
+         <a class="navbar-brand" href="#" style="margin-right: 100%; margin-left:-25%">Logo </a>
+         <div class="collapse navbar-collapse" id="navcol-1">
+           <span class="navbar-text">
+            <a class="btn btn-light action-button" role="button" href="#" style="margin-right: 30%;">Notification</a>
+             </span>
+             <a class="btn btn-light action-button" role="button" href="#" style="margin-left: 10%;" (click)="gotoadminloginpage()" routerLink="admin-login">Logout</a>
+         </div>
+       </div>
+     </nav> 
+    </div>
+
+
+        <mat-tab-group dynamicHeight>
+            <mat-tab label="Pending Advt. Approval"> 
+                <h2>Pending Advt. Approval</h2>
+                <div class="container">
+                    <div class="row">
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th scope="col" style="width: 7%;">Sr.No</th>
+                              <th scope="col" style="width: 7%;">Cust. ID</th>
+                              <th scope="col" style="width: 7%;">Advt. ID</th>
+                              <th scope="col" style="width: 10%;">Date</th>
+                              <th scope="col"style="width: 12%;">Name</th>
+                              <th scope="col" style="width: 12%;">Category</th>
+                              <th scope="col"style="width: 20%;">Show Advt.</th>
+                              <th scope="col">Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                                <th scope="col" style="width: 7%;"></th>
+                                <th scope="col" style="width: 7%;"></th>
+                                <th scope="col" style="width: 7%;"></th>
+                                <th scope="col" style="width: 10%;"></th>
+                                <th scope="col"style="width: 12%;"></th>
+                                <th scope="col" style="width: 12%;"></th>
+                                <th scope="col"style="width: 20%;"></th>
+                                <th scope="col">
+                                    <button type="button" class="btn btn-success" style="margin-left: 5%;">Approve</button>
+                                    <button type="button" class="btn btn-danger" style="margin-left: 5%;">Reject</button>
+                                  <button type="button" class="btn btn-primary" style="margin-left: 5%;">Edit</button>
+                                </th>
+                              </tr>
+                          </tbody>
+                        </table>
+                    </div></div>
+            </mat-tab>
+            <mat-tab label="Customer wise Advt.">
+                <h2>Customer wise Advt.</h2>
+                <div class="container">
+                    <div class="row">
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th scope="col" style="width: 7%;">Sr.No</th>
+                              <th scope="col" style="width: 7%;">Advt. ID</th>
+                              <th scope="col" style="width: 7%;">Cust. ID</th>
+                              <th scope="col" style="width: 10%;">Date</th>
+                              <th scope="col"style="width: 12%;">Name</th>
+                              <th scope="col" style="width: 12%;">Category</th>
+                              <th scope="col"style="width: 20%;">Show Advt.</th>
+                              <th scope="col" style="width: 10%;">Invoice</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                                <th scope="col" style="width: 7%;"></th>
+                                <th scope="col" style="width: 7%;"></th>
+                                <th scope="col" style="width: 10%;"></th>
+                                <th scope="col"style="width: 12%;"></th>
+                                <th scope="col" style="width: 12%;"></th>
+                                <th scope="col"style="width: 20%;"></th>
+                                <th scope="col"></th>
+                              </tr>
+                          </tbody>
+                        </table>
+                    </div></div></mat-tab>
+            <mat-tab label="New Enquiry"> 
+                <h2>New Enquiry</h2>
+                <div class="container">
+                    <div class="row">
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th scope="col" style="width: 20%;">Name</th>
+                              <th scope="col" style="width: 7%;">Cust. ID</th>
+                              <th scope="col" style="width: 15%;">Contact No.</th>
+                              <th scope="col" style="width: 50%;">Enquiry</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                                <th scope="col" style="width: 20%;"></th>
+                                <th scope="col" style="width: 7%;"></th>
+                                <th scope="col" style="width: 15%;"></th>
+                                <th scope="col" style="width: 50%;"></th>
+                              </tr>
+                          </tbody>
+                        </table>
+                    </div></div>
+                 </mat-tab>
+            <mat-tab label="Rejected Advt.">
+                <h2>Rejected Advt.</h2>
+                <div class="container">
+                    <div class="row">
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th scope="col" style="width: 7%;">Sr.No</th>
+                              <th scope="col" style="width: 7%;">Cust. ID</th>
+                              <th scope="col" style="width: 7%;">Advt. ID</th>
+                              <th scope="col" style="width: 10%;">Date</th>
+                              <th scope="col"style="width: 12%;">Name</th>
+                              <th scope="col" style="width: 12%;">Category</th>
+                              <th scope="col"style="width: 20%;">Show Advt.</th>
+                              <th scope="col" style="width: 15%;">Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                                <th scope="col" style="width: 7%;"></th>
+                                <th scope="col" style="width: 7%;"></th>
+                                <th scope="col" style="width: 7%;"></th>
+                                <th scope="col" style="width: 10%;"></th>
+                                <th scope="col"style="width: 12%;"></th>
+                                <th scope="col" style="width: 12%;"></th>
+                                <th scope="col"style="width: 20%;"></th>
+                                <th scope="col">
+                                    <button type="button" class="btn btn-success" style="margin-left: 5%;">Approve</button>
+                                  <button type="button" class="btn btn-primary" style="margin-left: 5%;">Edit</button>
+                                </th>
+                              </tr>
+                          </tbody>
+                        </table>
+                    </div></div>
+                 </mat-tab>
+            <mat-tab label="Expired Advt.">
+                <h2>Expired Advt.</h2>
+                <div class="container">
+                    <div class="row">
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th scope="col" style="width: 7%;">Sr.No</th>
+                              <th scope="col" style="width: 7%;">Advt. ID</th>
+                              <th scope="col" style="width: 7%;">Cust. ID</th>
+                              <th scope="col" style="width: 10%;">Date</th>
+                              <th scope="col"style="width: 12%;">Name</th>
+                              <th scope="col" style="width: 12%;">Category</th>
+                              <th scope="col"style="width: 20%;">Show Advt.</th>
+                              <th scope="col" style="width: 10%;">Invoice</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                                <th scope="col" style="width: 7%;"></th>
+                                <th scope="col" style="width: 7%;"></th>
+                                <th scope="col" style="width: 10%;"></th>
+                                <th scope="col"style="width: 12%;"></th>
+                                <th scope="col" style="width: 12%;"></th>
+                                <th scope="col"style="width: 20%;"></th>
+                                <th scope="col"></th>
+                              </tr>
+                          </tbody>
+                        </table>
+                    </div></div>
+                 </mat-tab>
+            <mat-tab label="Update Details">
+                <div>
+                    <form [formGroup]="updatedetails" (ngSubmit)="update()">
+                        <mat-card class="card mx-auto my-5 p-5">
+                            <mat-card-header class="justify-content-center">
+                                <mat-card-title class="fw-bold p-4" style="font-size: xx-large; text-align: center;" >Update Details</mat-card-title>
+                            </mat-card-header>
+                            <mat-card-content class="text-center">
+                                <mat-form-field class="example-full-width" appearance="fill">
+                                    <mat-label>Days</mat-label>
+                                    <input matInput placeholder="Enter email" formControlName="days" />
+                                    <!-- <mat-error>Email required</mat-error> -->
+                                </mat-form-field>
+                    
+                                <mat-form-field class="example-full-width" appearance="fill">
+                                    <mat-label>Rate</mat-label>
+                                    <input matInput
+                                        formControlName="rate" />
+                                    <!-- <mat-error>Password required</mat-error> -->
+                                </mat-form-field>
+                            </mat-card-content>
+                            
+                            <mat-form-field appearance="fill" style="width: 80%"  >
+                                <mat-label>Advt. Type</mat-label>
+                                <mat-select formControlName="advt_type">
+                                    <mat-option>None</mat-option>
+                                    <mat-option value="option1">Option 1</mat-option>
+                                    <mat-option value="option2">Option 2</mat-option>
+                                    <mat-option value="option3">Option 3</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <mat-card-footer class="text-center">
+                                <div>
+                                    <button mat-raised-button type="submit" color="primary" style="width: 20%; ">
+                                      Submit
+                                    </button>
+                                  </div>
+                            </mat-card-footer>
+                        </mat-card>
+                    </form>
+                </div>
+                <div>
+                    <h2>Add Category</h2>
+                    <form [formGroup]="add_category" (ngSubmit)="add()">
+                        <mat-card class>
+                            <mat-card-header class="justify-content-center">
+                                <mat-card-title class="fw-bold p-3">
+                                    Category
+                                </mat-card-title>
+                            </mat-card-header>
+                                <div>
+                                    <mat-form-field appearance="fill" style="width: 20%">
+                                        <mat-label></mat-label>
+                                        <textarea matInput placeholder="Enter New Category here...." formControlName="desc"></textarea>
+                                    </mat-form-field>
+                                </div>
+                                <div >
+                                    <button mat-raised-button type="submit" color="primary" style="width: 20%;">
+                                      Submit
+                                    </button>
+                                  </div>
+                        </mat-card>
+                    </form>
+                </div>
+                 </mat-tab>
+            <mat-tab label="Show All"> 
+                <h2>Show All</h2>
+                <mat-form-field style="margin-right: 10%;">
+                    <input matInput placeholder="Service Category">
+                   </mat-form-field> 
+
+                   <mat-form-field>
+                    <input matInput placeholder="Location">
+                   </mat-form-field>  
+            </mat-tab>
+            <mat-tab label="Invoice"> Content 3 </mat-tab>
+          </mat-tab-group>
+
+          <div class="icons">
+            <ul>
+              <a href=""><li class="call"><i class="fa fa-phone-square" aria-hidden="true"></i></li></a>
+              <a href=""><li class="whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></li></a>
+              <a href=""><li class="share"><i class="fa fa-share" aria-hidden="true"></i></li></a>
+            </ul>
+          </div>
+
+  <!-- <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Pending <br> Advt. <br> Approval</th>
+              <th scope="col">Customer <br> wise Advt</th>
+              <th scope="col">New <br> Enquiry</th>
+              <th scope="col">Rejected <br> Advt.</th>
+              <th scope="col">Expired <br> Advt.</th>
+              <th scope="col">Update <br> Details</th>
+              <th scope="col">Show <br> All</th>
+              <th scope="col">Invoice</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" style="width: 10%"></th>
+              <td style="width: 40%;"></td>
+              <td style="width: 10%;"></td>
+              <td style="width: 30%;">
+                <button type="button" class="btn btn-primary" style="margin-left: 5%;">Edit</button>
+                <button type="button" class="btn btn-success" style="margin-left: 5%;">Deactivate</button>
+              <button type="button" class="btn btn-danger" style="margin-left: 5%;">Renew</button>
+              </td>
+              <td style="width: 10%;"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div> -->

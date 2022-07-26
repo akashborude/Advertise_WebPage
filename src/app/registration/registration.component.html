@@ -1,0 +1,67 @@
+<form [formGroup]="registration" (ngSubmit)="register()"> 
+    <mat-card class="card mx-auto my-5 p-5">
+        <mat-card-header class=" justify-content-center">
+            <mat-card-title class="fw-bold p-3" >
+                REGISTRATION
+            </mat-card-title>
+        </mat-card-header>
+        <div>
+        <mat-form-field class="example-full-width" appearance="fill"  style="margin-left: 5%; width: 40%">
+            <mat-label>Name</mat-label>
+            <mat-error>Please! Enter your Full Name</mat-error>
+            <input matInput placeholder="Enter Full Name" formControlName="name" />
+            
+          </mat-form-field>
+        
+          <mat-form-field appearance="fill" style="margin-left:5%; width: 40%">
+            <mat-label> Date of Birth</mat-label>
+            <input matInput [matDatepicker]="picker3" formControlName="startdate" />
+            <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+            <mat-datepicker #picker3></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="example-full-width" appearance="fill"  style="margin-left: 5%; width: 40%">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="" formControlName="email" />
+            <mat-error>Please! Enter your Email Address</mat-error>
+          </mat-form-field>
+        
+          <mat-form-field class="textformat" appearance="fill"  style="margin-left:5%; width: 40%">
+            <mat-label> Aadhar Number</mat-label>
+            <input matInput placeholder="9999-9999-9999" formControlName="aadhar_no" maxlength="12" minlength="12"/>
+            <mat-error>Please! Enter 12 Digit aadhar Number</mat-error>
+          </mat-form-field>
+        
+        </div>
+        <div>
+            
+      
+
+      <mat-form-field class="example-full-width" appearance="fill"  style="margin-left:5%; width: 85%">
+        <mat-label>Address</mat-label>
+        <input matInput placeholder="Enter Address" formControlName="address" />
+        
+      </mat-form-field>
+        
+            <mat-form-field class="textformat" appearance="fill" style="margin-left:5%; width: 40%">
+                <mat-label>Contact Number</mat-label>
+                <input matInput placeholder="9999999999" formControlName="mob_no" maxlength="10" minlength="10"/>
+                <mat-error>Please! Enter 10 Digit Mobile Number</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill"  style="margin-left:5%; width: 40%">
+              <mat-label>Set Password</mat-label>
+              <input type="password" matInput placeholder="Set Password" formControlName="pass">
+              <!-- <input matInput placeholder="Set Password" formControlName="pass" /> -->
+              
+            </mat-form-field>
+        </div>
+            <div style="margin-left: 35%">
+                <button mat-raised-button type="submit" color="primary" style="width: 40%; " [disabled]="registration.invalid">
+                  Submit
+                </button>
+              </div>
+    </mat-card>
+</form>
+ 

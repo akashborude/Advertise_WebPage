@@ -1,0 +1,175 @@
+<div>
+    <form [formGroup]="submitmyadvt" (ngSubmit)="submit()">
+        <mat-card class="card mx-auto my-5 p-5">
+            <mat-card-header class="justify-content-center" style="font-size: 15px;">
+                <mat-card-title class="fw-bold p-3 " >
+                    TEXT AD FORM
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="text-center">
+                <div>
+                    <mat-form-field appearance="fill" style="margin-left: 5%; width: 40%">
+                        <mat-label>Category</mat-label>
+                        <mat-select formControlName="category">
+                            <mat-option>None</mat-option>
+                            <mat-option value="option1">Option 1</mat-option>
+                            <mat-option value="option2">Option 2</mat-option>
+                            <mat-option value="option3">Option 3</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+    
+                    <mat-form-field appearance="fill" style="margin-left: 5%; width: 40%"  >
+                        <mat-label>Location</mat-label>
+                        <mat-select formControlName="loc">
+                            <mat-option>None</mat-option>
+                            <mat-option value="option1">Option 1</mat-option>
+                            <mat-option value="option2">Option 2</mat-option>
+                            <mat-option value="option3">Option 3</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+    
+                <div class="form-row">
+                    <mat-form-field appearance="fill" style="margin-left: 5%; width: 85%">
+                        <mat-label>Tag Line (6 words)</mat-label>
+                        <textarea matInput placeholder="Enter Tag line" formControlName="desc"></textarea>
+                    </mat-form-field>
+            
+                    <!-- <mat-form-field appearance="fill"style="margin-left: 20px; width: 20%">
+                        <mat-label>Short Discription(25 words)</mat-label>
+                        <textarea matInput placeholder="Enter Description" formControlName="desc"></textarea>
+                    </mat-form-field> -->
+                </div>
+                <div>
+                    <mat-form-field class="textformat" appearance="fill" style="margin-left: 5%; width: 40%">
+                        <mat-label>Contact Number</mat-label>
+                        <input matInput placeholder="9999999999" formControlName="mob_no" />
+                        <mat-error>Please! Enter 10 Digit Mobile Number</mat-error>
+                    </mat-form-field>
+                
+                    <mat-form-field appearance="fill" style="margin-left: 5%; width: 40%">
+                        <mat-label>No of Days</mat-label>
+                        <mat-select formControlName="days">
+                            <mat-option value="15">15 </mat-option>
+                            <mat-option value="30">30</mat-option>
+                            <mat-option value="60">60</mat-option>
+                            <mat-option value="90">90</mat-option>
+                            <mat-option value="180">180</mat-option>
+                            <mat-option value="365">365</mat-option>
+    
+                        </mat-select>
+                    </mat-form-field>
+                    <div class="form-row">
+                        <mat-form-field appearance="fill" style="margin-left: 5%; width: 40%">
+                            <mat-label>Duration</mat-label>
+                            <input matInput [matDatepicker]="picker4" formControlName="startdate" />
+                            <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+                            <mat-datepicker #picker4></mat-datepicker>
+                        </mat-form-field>
+                   
+                        <mat-form-field class="example-full-width" appearance="fill" style="margin-left: 5%; width: 40%">
+                            <mat-label>Amount</mat-label>
+                            <input matInput placeholder="Enter Amount" formControlName="amount" />
+                        </mat-form-field>
+                    </div>
+    
+                </div>
+                <div>
+                    <button mat-raised-button type="submit" color="primary" style="width: 10%; " >
+                      Submit
+                    </button>
+                  </div>
+    
+            </mat-card-content>
+        </mat-card>
+    </form>
+</div>
+
+<div>
+    <form [formGroup]="submitmyadvt_1" (ngSubmit)="submit_display()">
+        <mat-card class="card mx-auto my-5 p-5">
+            <mat-card-header class="justify-content-center">
+                <mat-card-title class="fw-bold p-3">
+                   
+                    DISPLAY AD FORM
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="text-center">
+                <div>
+                    <mat-form-field appearance="fill" style="margin-left: 5%; width: 40%">
+                        <mat-label>Category</mat-label>
+                        <mat-select formControlName="category">
+                            <mat-option>None</mat-option>
+                            <mat-option value="option1">Option 1</mat-option>
+                            <mat-option value="option2">Option 2</mat-option>
+                            <mat-option value="option3">Option 3</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+    
+                    <mat-form-field appearance="fill" style="margin-left: 5%; width: 40%">
+                        <mat-label>Location</mat-label>
+                        <mat-select formControlName="loc">
+                            <mat-option>None</mat-option>
+                            <mat-option value="option1">Option 1</mat-option>
+                            <mat-option value="option2">Option 2</mat-option>
+                            <mat-option value="option3">Option 3</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+    
+                <div>
+                    <mat-form-field class="textformat" appearance="fill" style="margin-left: 5%; width: 40%">
+                        <mat-label>Contact Number</mat-label>
+                        <input matInput placeholder="9999999999" formControlName="mob_no" />
+                        <mat-error>Please! Enter 10 Digit Mobile Number</mat-error>
+                    </mat-form-field>
+                
+                    <mat-form-field appearance="fill" style="margin-left: 5%; width: 40%">
+                        <mat-label>No of Days</mat-label>
+                        <mat-select formControlName="days">
+                            <mat-option value="15">15 </mat-option>
+                            <mat-option value="30">30</mat-option>
+                            <mat-option value="60">60</mat-option>
+                            <mat-option value="90">90</mat-option>
+                            <mat-option value="180">180</mat-option>
+                            <mat-option value="365">365</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <div class="form-row">
+                        <mat-form-field appearance="fill" style="margin-left: 5%; width: 40%">
+                            <mat-label>Duration</mat-label>
+                            <input matInput [matDatepicker]="picker3" formControlName="startdate" />
+                            <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                            <mat-datepicker #picker3></mat-datepicker>
+                        </mat-form-field>
+                   
+                        <mat-form-field class="example-full-width" appearance="fill" style="margin-left: 5%; width: 40%">
+                            <mat-label>Amount</mat-label>
+                            <input matInput placeholder="Enter Amount" formControlName="amount" />
+                        </mat-form-field>
+
+                        <div>
+                            <mat-form-field class="example-full-width" appearance="fill" style="margin-left: 5%; width: 85%">
+                                <mat-label>Upload Image</mat-label><br>
+                                <p style="opacity: 50%;">(max.200x200px, Max Size 200kb) To resize the Image 
+                                    <a href="www.tinyjpg.com">Click here</a></p>
+                                <input matInput placeholder="" formControlName="upload" />
+                            </mat-form-field>
+                        </div>
+
+                        <!-- <div class="file_button">
+                            <button><label for="fileselector" aria-label="Upload IMG"></label>Upload IMG</button>
+                        </div> -->
+                    </div>
+    
+                </div>
+                <div>
+                    <button mat-raised-button type="submit" color="primary" style="width: 10%; ">
+                      Submit
+                    </button>
+                  </div>
+    
+            </mat-card-content>
+        </mat-card>
+    </form>
+</div>

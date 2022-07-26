@@ -1,0 +1,34 @@
+<form [formGroup]="submitenquiry" (ngSubmit)="enquiry()">
+    <mat-card class>
+        <mat-card-header class="justify-content-center">
+            <mat-card-title class="fw-bold p-3">
+                SUBMIT MY ENQUIRY
+            </mat-card-title>
+        </mat-card-header>
+        <div style="margin-left: 37%;">
+            <mat-form-field class="example-full-width" appearance="fill"  style="width: 40%">
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Enter Full Name" formControlName="name" />
+                
+              </mat-form-field>
+            </div>
+            <div style="margin-left: 37%;">
+                <mat-form-field class="textformat" appearance="fill" style="width: 40%">
+                    <mat-label>Contact Number</mat-label>
+                    <input matInput placeholder="9999999999" formControlName="mob_no" minlength="10" maxlength="10"/>
+                    <mat-error>Please! Enter 10 Digit Mobile Number</mat-error>
+                </mat-form-field>
+            </div>
+            <div style="margin-left: 37%;">
+                <mat-form-field appearance="fill" style="width: 40%">
+                    <mat-label>Enquiry</mat-label>
+                    <textarea matInput placeholder="Enter Your Enquiry" formControlName="desc"></textarea>
+                </mat-form-field>
+            </div>
+            <div style="margin-left: 37%;">
+                <button mat-raised-button type="submit" color="primary" style="width: 40%;" [disabled]="submitenquiry.invalid">
+                  Submit
+                </button>
+              </div>
+    </mat-card>
+</form>
